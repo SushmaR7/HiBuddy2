@@ -2,10 +2,13 @@
 const fs= require("fs");
 const express = require("express");
 const app = express();
+const cors = require("cors");
  
 app.use(express.json());
+app.use(cors());
 const file="./db.json";
 //--read & write json------------
+
 
 function readJson(){
   const data=fs.readFileSync(file,"utf-8");
